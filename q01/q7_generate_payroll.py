@@ -1,0 +1,11 @@
+n = input("Enter name: ")
+h = int(input("Enter number of hours worked weekly: "))
+r = float(input("Enter hourly pay rate: "))
+cpf = float(input("Enter CPF contribution rate(%): "))
+
+print("Payroll statement for " + n)
+print("Number of hours worked in week: " + str(h))
+print("Hourly pay rate: $" + str("{:.2f}".format(r)))
+print("Gross pay = $" + str("{:.2f}".format(h*r)))
+print("CPF contribution at "+str(cpf)+"% = $" + str("{:.2f}".format(h*r*cpf/100)))
+print("Net pay = $" + str("{:.2f}".format((h*r*(100-cpf)/100))) )
